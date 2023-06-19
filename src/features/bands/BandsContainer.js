@@ -7,7 +7,7 @@ import Band from "./Band";
 function BandsContainer() {
   const dispatch = useDispatch();
   const bands = useSelector((state) => state.bands.entities);
-  const bando = bands.map((band, index) => <Band key={index} band={band}/>)
+  const bando = bands.map((band) => <Band key={band.id} band={band}/>)
 
   function handleBandSubmit(name) {
     dispatch(bandAdded(name));
